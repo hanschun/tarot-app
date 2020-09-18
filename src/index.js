@@ -4,9 +4,30 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const EMPLOYEES = [
+  {
+    name: "Parker Green",
+  },
+  {
+    name: "Jordan Richards",
+  },
+  {
+    name: "Alex Stevens",
+  },
+  {
+    name: "Avery Scott",
+  },
+  {
+    name: "Riley Miller",
+  },
+  {
+    name: "Charlie Green",
+  },
+];
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App employees={EMPLOYEES}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

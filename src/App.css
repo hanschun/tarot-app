@@ -1,10 +1,41 @@
 .App {
-  text-align: center;
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.App-padding {
+  flex: 2
+}
+
+.App-section {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.Card-back {
+  left: 0px;
+  height: 50vmin;
+  pointer-events: none;
+}
+
+.Card {
+  right: -275px;
+  height: 50vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Card {
+    animation: Card-slide 1 1s linear;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -34,5 +65,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes Card-slide {
+  from {
+    transform: translateX(-275px)
+  }
+  to {
+    transform: translateX(0px)
   }
 }
